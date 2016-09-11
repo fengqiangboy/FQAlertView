@@ -13,6 +13,10 @@
 		07AEE1FB1D854FF4008EDFBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AEE1F91D854FF4008EDFBB /* Main.storyboard */; };
 		07AEE1FD1D854FF4008EDFBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07AEE1FC1D854FF4008EDFBB /* Assets.xcassets */; };
 		07AEE2001D854FF4008EDFBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AEE1FE1D854FF4008EDFBB /* LaunchScreen.storyboard */; };
+		07AEE20D1D855189008EDFBB /* FQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AEE20C1D855189008EDFBB /* FQAlertView.m */; };
+		07AEE20F1D855206008EDFBB /* FQAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07AEE20E1D855206008EDFBB /* FQAlertView.bundle */; };
+		07AEE2121D855419008EDFBB /* NSBundle+FQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AEE2111D855419008EDFBB /* NSBundle+FQAlertView.m */; };
+		07AEE2151D855FF6008EDFBB /* FQAlertCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AEE2141D855FF6008EDFBB /* FQAlertCenterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		07AEE1FC1D854FF4008EDFBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07AEE1FF1D854FF4008EDFBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07AEE2011D854FF4008EDFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07AEE20B1D855189008EDFBB /* FQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FQAlertView.h; sourceTree = "<group>"; };
+		07AEE20C1D855189008EDFBB /* FQAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FQAlertView.m; sourceTree = "<group>"; };
+		07AEE20E1D855206008EDFBB /* FQAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FQAlertView.bundle; sourceTree = "<group>"; };
+		07AEE2101D855419008EDFBB /* NSBundle+FQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FQAlertView.h"; sourceTree = "<group>"; };
+		07AEE2111D855419008EDFBB /* NSBundle+FQAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FQAlertView.m"; sourceTree = "<group>"; };
+		07AEE2131D855FF6008EDFBB /* FQAlertCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FQAlertCenterView.h; sourceTree = "<group>"; };
+		07AEE2141D855FF6008EDFBB /* FQAlertCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FQAlertCenterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 		07AEE1EF1D854FF4008EDFBB /* FQAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				07AEE2071D85503A008EDFBB /* FQAlertView */,
 				07AEE1F31D854FF4008EDFBB /* AppDelegate.h */,
 				07AEE1F41D854FF4008EDFBB /* AppDelegate.m */,
 				07AEE1F61D854FF4008EDFBB /* ViewController.h */,
@@ -78,6 +90,20 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		07AEE2071D85503A008EDFBB /* FQAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				07AEE20B1D855189008EDFBB /* FQAlertView.h */,
+				07AEE20C1D855189008EDFBB /* FQAlertView.m */,
+				07AEE2101D855419008EDFBB /* NSBundle+FQAlertView.h */,
+				07AEE2111D855419008EDFBB /* NSBundle+FQAlertView.m */,
+				07AEE2131D855FF6008EDFBB /* FQAlertCenterView.h */,
+				07AEE2141D855FF6008EDFBB /* FQAlertCenterView.m */,
+				07AEE20E1D855206008EDFBB /* FQAlertView.bundle */,
+			);
+			path = FQAlertView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -136,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AEE20F1D855206008EDFBB /* FQAlertView.bundle in Resources */,
 				07AEE2001D854FF4008EDFBB /* LaunchScreen.storyboard in Resources */,
 				07AEE1FD1D854FF4008EDFBB /* Assets.xcassets in Resources */,
 				07AEE1FB1D854FF4008EDFBB /* Main.storyboard in Resources */,
@@ -151,6 +178,9 @@
 			files = (
 				07AEE1F81D854FF4008EDFBB /* ViewController.m in Sources */,
 				07AEE1F51D854FF4008EDFBB /* AppDelegate.m in Sources */,
+				07AEE20D1D855189008EDFBB /* FQAlertView.m in Sources */,
+				07AEE2151D855FF6008EDFBB /* FQAlertCenterView.m in Sources */,
+				07AEE2121D855419008EDFBB /* NSBundle+FQAlertView.m in Sources */,
 				07AEE1F21D854FF4008EDFBB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FQAlertViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fengqiangboy.FQAlertViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FQAlertViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fengqiangboy.FQAlertViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
