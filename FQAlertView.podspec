@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  An alert view for iOS, you can easy to get an beatuful alert view.
                    DESC
 
   s.homepage     = "https://github.com/fq050766/FQAlerView"
