@@ -8,7 +8,6 @@
 
 #import "FQAlertView.h"
 #import "NSBundle+FQAlertView.h"
-#import "FQAlertCenterView.h"
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -69,9 +68,6 @@
     self.alertCenterView = alertCenterView;
     alertCenterView.center = CGPointMake(WIDTH/2, HEIGHT/2);
     alertCenterView.delegate = self;
-    alertCenterView.cancelBtnTitle = @"取消";
-    alertCenterView.sureBtnTitle = @"立即登录";
-    alertCenterView.alertMsg = @"亲，先登录后分享，会有意想不到的红利哦！";
     alertCenterView.alertViewType = FQAlertViewTypeTick;
     [self addSubview:alertCenterView];
 }
@@ -109,6 +105,25 @@
     }
 }
 
++ (instancetype)alertViewWithType:(FQAlertViewType)type message:(NSString *)message sureTitle:(NSString *)sureTitle cancelTiele:(NSString *)cancelTiele handleBlock:(FQAlertViewClickBlock)block {
+    
+    FQAlertView *alertView = [FQAlertView new];
+    
+    alertView.handleBlock = block;
+    alertView.alertCenterView.cancelBtnTitle = cancelTiele;
+    alertView.alertCenterView.sureBtnTitle = sureTitle;
+    alertView.alertCenterView.alertMsg = message;
+    alertView.alertCenterView.alertViewType = type;
+    
+    return alertView;
+}
+
++ (void)showAlertViewWithType:(FQAlertViewType)type message:(NSString *)message sureTitle:(NSString *)sureTitle cancelTiele:(NSString *)cancelTiele handleBlock:(FQAlertViewClickBlock)block {
+    FQAlertView *alertView = [self alertViewWithType:type message:message sureTitle:sureTitle cancelTiele:cancelTiele handleBlock:block];
+    
+    [alertView showWithAnimation:YES];
+}
+
 - (void)hideCompleteHandle {
     [self removeFromSuperview];
     self.window.hidden = YES;
@@ -117,10 +132,12 @@
 
 #pragma mark - FQAlertCenterViewDelegate
 - (void)alertCenterViewSureBtnClick:(UIButton *)btn {
-    
+    self.handleBlock ? self.handleBlock(FQAlertViewClickTypeSure, btn) : nil;
+    [self hideWithAnimation:YES];
 }
 
 - (void)alertCenterViewCancelBtnClick:(UIButton *)btn {
+    self.handleBlock ? self.handleBlock(FQAlertViewClickTypeCancel, btn) : nil;
     [self hideWithAnimation:YES];
 }
 
