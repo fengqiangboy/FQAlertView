@@ -13,11 +13,13 @@
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface FQAlertView ()
+@interface FQAlertView () <FQAlertCenterViewDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
 
 @property (nonatomic, strong) UIView *backShadowView;
+
+@property (nonatomic, strong) FQAlertCenterView *alertCenterView;
 
 @end
 
@@ -33,6 +35,7 @@
 }
 
 - (void)commentInit {
+    self.frame = [UIScreen mainScreen].bounds;
     [self buildViews];
 }
 
@@ -63,7 +66,13 @@
 #pragma mark - Views
 - (void)buildViews {
     FQAlertCenterView *alertCenterView = [FQAlertCenterView new];
+    self.alertCenterView = alertCenterView;
     alertCenterView.center = CGPointMake(WIDTH/2, HEIGHT/2);
+    alertCenterView.delegate = self;
+    alertCenterView.cancelBtnTitle = @"取消";
+    alertCenterView.sureBtnTitle = @"立即登录";
+    alertCenterView.alertMsg = @"亲，先登录后分享，会有意想不到的红利哦！";
+    alertCenterView.alertViewType = FQAlertViewTypeTick;
     [self addSubview:alertCenterView];
 }
 
@@ -72,6 +81,47 @@
     self.window.hidden = NO;
     [self insertSubview:self.backShadowView atIndex:0];
     [self.window addSubview:self];
+    if (animation) {
+        __weak typeof(self) wSelf = self;
+        self.backShadowView.alpha = 0;
+        self.alertCenterView.transform = CGAffineTransformMakeScale(.3f, .3f);
+        [UIView animateWithDuration:.3f delay:0 usingSpringWithDamping:.7 initialSpringVelocity:.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            wSelf.backShadowView.alpha = .3f;
+            wSelf.alertCenterView.transform = CGAffineTransformIdentity;
+        } completion:nil];
+    }
+}
+
+- (void)hideWithAnimation:(BOOL)animation {
+    
+    if (animation) {
+        __weak typeof(self) wSelf = self;
+        [UIView animateWithDuration:.1f animations:^{
+            wSelf.backShadowView.alpha = 0;
+            wSelf.alertCenterView.transform = CGAffineTransformMakeScale(.1f, .1f);
+            wSelf.alertCenterView.alpha = .1f;
+        } completion:^(BOOL finished) {
+            [wSelf hideCompleteHandle];
+        }];
+    }
+    else {
+        [self hideCompleteHandle];
+    }
+}
+
+- (void)hideCompleteHandle {
+    [self removeFromSuperview];
+    self.window.hidden = YES;
+    self.window = nil;
+}
+
+#pragma mark - FQAlertCenterViewDelegate
+- (void)alertCenterViewSureBtnClick:(UIButton *)btn {
+    
+}
+
+- (void)alertCenterViewCancelBtnClick:(UIButton *)btn {
+    [self hideWithAnimation:YES];
 }
 
 
