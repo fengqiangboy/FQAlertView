@@ -4,13 +4,13 @@ FQAlertView是一个iOS平台上的一个美观的提示窗视图，集成简单
 
 # 项目展示
 * Tick类型
-<img src="http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeTick.png" width = "250" alt="Tick类型" align=center />
+<img src="http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeTick.png" width = "250" alt="Tick类型"/>
 
 * Waring类型
-<img src="http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeWaring.png" width = "250" alt="Waring类型" align=center />
+<img src="http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeWaring.png" width = "250" alt="Waring类型"/>
 
 * Error类型
-<img src="http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeError.png" width = "250" alt="Error类型" align=center />
+<img src="http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeError.png" width = "250" alt="Error类型"/>
 
 
 # 安装
