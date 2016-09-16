@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FQAlertView"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "An alert view for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   An alert view for iOS, you can easy to get an beatuful alert view.
                    DESC
 
-  s.homepage     = "https://github.com/fq050766/FQAlerView"
+  s.homepage     = "https://github.com/fq050766/FQAlertView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
