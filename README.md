@@ -2,6 +2,21 @@
 
 FQAlertView是一个iOS平台上的一个美观的提示窗视图，集成简单，使用方便。
 
+# 项目展示
+* Tick类型
+
+
+![(Tick类型)](http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeTick.png)
+
+* Waring类型
+
+![(Waring类型)](http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeWaring.png)
+
+* Error类型
+
+![(Error类型)](http://7xt6ir.com1.z0.glb.clouddn.com/git/img/FQAlertViewTypeError.png)
+
+
 # 安装
 ## CocoaPods
 
