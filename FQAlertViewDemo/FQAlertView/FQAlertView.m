@@ -27,6 +27,9 @@
 #pragma mark - Init
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+//        NSLog(@"%ld", (long)[UIApplication sharedApplication].statusBarStyle);
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        
         [self commentInit];
     }
     
@@ -41,11 +44,12 @@
 #pragma mark - Get
 - (UIWindow *)window {
     if (!_window) {
-        _window = [UIWindow new];
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _window.windowLevel = UIWindowLevelAlert;
         _window.hidden = YES;
         _window.frame = [UIScreen mainScreen].bounds;
         _window.backgroundColor = [UIColor clearColor];
+        _window.rootViewController = nil;
     }
     
     return _window;
