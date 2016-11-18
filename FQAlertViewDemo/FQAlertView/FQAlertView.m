@@ -8,6 +8,7 @@
 
 #import "FQAlertView.h"
 #import "NSBundle+FQAlertView.h"
+#import "FQPlaceholdViewController.h"
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -46,6 +47,7 @@
         _window.hidden = YES;
         _window.frame = [UIScreen mainScreen].bounds;
         _window.backgroundColor = [UIColor clearColor];
+        _window.rootViewController = [FQPlaceholdViewController new];
     }
     
     return _window;

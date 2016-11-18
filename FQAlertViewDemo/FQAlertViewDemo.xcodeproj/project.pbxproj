@@ -17,6 +17,7 @@
 		07AEE20F1D855206008EDFBB /* FQAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07AEE20E1D855206008EDFBB /* FQAlertView.bundle */; };
 		07AEE2121D855419008EDFBB /* NSBundle+FQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AEE2111D855419008EDFBB /* NSBundle+FQAlertView.m */; };
 		07AEE2151D855FF6008EDFBB /* FQAlertCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AEE2141D855FF6008EDFBB /* FQAlertCenterView.m */; };
+		CD2D9A651DDF5875005DA371 /* FQPlaceholdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2D9A641DDF5875005DA371 /* FQPlaceholdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		07AEE2111D855419008EDFBB /* NSBundle+FQAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FQAlertView.m"; sourceTree = "<group>"; };
 		07AEE2131D855FF6008EDFBB /* FQAlertCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FQAlertCenterView.h; sourceTree = "<group>"; };
 		07AEE2141D855FF6008EDFBB /* FQAlertCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FQAlertCenterView.m; sourceTree = "<group>"; };
+		CD2D9A631DDF5875005DA371 /* FQPlaceholdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FQPlaceholdViewController.h; sourceTree = "<group>"; };
+		CD2D9A641DDF5875005DA371 /* FQPlaceholdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FQPlaceholdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				07AEE2111D855419008EDFBB /* NSBundle+FQAlertView.m */,
 				07AEE2131D855FF6008EDFBB /* FQAlertCenterView.h */,
 				07AEE2141D855FF6008EDFBB /* FQAlertCenterView.m */,
+				CD2D9A631DDF5875005DA371 /* FQPlaceholdViewController.h */,
+				CD2D9A641DDF5875005DA371 /* FQPlaceholdViewController.m */,
 				07AEE20E1D855206008EDFBB /* FQAlertView.bundle */,
 			);
 			path = FQAlertView;
@@ -176,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2D9A651DDF5875005DA371 /* FQPlaceholdViewController.m in Sources */,
 				07AEE1F81D854FF4008EDFBB /* ViewController.m in Sources */,
 				07AEE1F51D854FF4008EDFBB /* AppDelegate.m in Sources */,
 				07AEE20D1D855189008EDFBB /* FQAlertView.m in Sources */,
@@ -332,6 +338,7 @@
 				07AEE2061D854FF4008EDFBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
