@@ -141,6 +141,7 @@
 				TargetAttributes = {
 					07AEE1EC1D854FF4008EDFBB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = CWS5QZG6VE;
 					};
 				};
 			};
@@ -299,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CWS5QZG6VE;
 				INFOPLIST_FILE = FQAlertViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -311,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CWS5QZG6VE;
 				INFOPLIST_FILE = FQAlertViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

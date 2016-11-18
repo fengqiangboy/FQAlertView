@@ -14,11 +14,11 @@
  */
 typedef NS_ENUM(NSUInteger, FQAlertViewClickType) {
     /**
-     *  取消按钮
+     *  确认按钮
      */
     FQAlertViewClickTypeSure,
     /**
-     *  确认按钮
+     *  取消按钮
      */
     FQAlertViewClickTypeCancel,
 };
